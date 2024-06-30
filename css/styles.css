@@ -40,3 +40,39 @@ body {
     padding: 5px;
     width: 100%;
 }
+
+.gallery img:hover,
+.gallery image:focus {
+    cursor: pointer;
+    animation: jump-shaking 0.83s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes jump-shaking {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateY(-9px);
+    }
+
+    35% {
+        transform: translateY(-9px) rotate(6deg);
+    }
+
+    55% {
+        transform: translateY(-9px) rotate(-6deg);
+    }
+
+    65% {
+        transform: translateY(-9px) rotate(6deg);
+    }
+
+    75% {
+        transform: translateY(-9px) rotate(-6deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
